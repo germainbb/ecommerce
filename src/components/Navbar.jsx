@@ -1,22 +1,29 @@
 import { ShoppingCartOutlined } from "@mui/icons-material";
+import Badge from "@mui/material/Badge";
+import Search from "@mui/icons-material/Search";
 import React from "react";
-import styledComponents from "styled-components";
 import styled from "styled-components";
-impo;
 
 const Container = styled.div`
+  font-size: 20px;
+  font-weight: 60px;
   height: 60px;
+  background-color: aliceblue;
+  align-items: center;
 `;
 const Wrapper = styled.div`
+  align-items: center;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
 `;
 const Left = styled.div`
+  display: flex;
   flex: 1;
 `;
 const Language = styled.div`
   flex: 1;
+  width: 10px;
 `;
 
 const Center = styled.div`
@@ -25,22 +32,36 @@ const Center = styled.div`
 `;
 const Right = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  justify-items: flex-end;
 `;
 const SearchContainer = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  padding: 5px;
+  border: 1px solid red;
+  width: 90%;
+  background-color: white;
+  border-radius: 5px;
 `;
 const Input = styled.input`
+  border-color: white;
+  border-style: none;
   border: none;
+  align-items: center;
+  width: 90%;
 `;
 const Logo = styled.h1`
-  font-weight: bold;
+  font-weight: 100;
+  font-size: 50;
 `;
-const MenuItem = styled.div``;
-const Search = styled.div``;
-const Badge = styled.div``;
+const MenuItem = styled.div`
+  cursor: pointer;
+  right: 9px;
+`;
 
 export const Navbar = () => {
   return (
@@ -49,11 +70,13 @@ export const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder="search" />
             <Search style={{ color: "orange", fontSize: 16 }} />
           </SearchContainer>
         </Left>
-        <Center>GThink</Center>
+        <Center>
+          <Logo>GThink</Logo>
+        </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>

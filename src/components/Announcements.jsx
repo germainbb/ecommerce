@@ -1,8 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
   height: 30px;
-  background-color: purple;
+  background-color: lightseagreen;
   color: white;
   display: flex;
   align-items: center;
@@ -12,5 +13,5 @@ const Container = styled.div`
 `;
 
 export const Announcements = () => {
-  return <div>Announcements</div>;
+  return <Container>SUPER DEAL! FREE SHIPPING ON ORDERS OVER $30</Container>;
 };
